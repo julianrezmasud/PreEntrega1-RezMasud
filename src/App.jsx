@@ -1,16 +1,18 @@
-import { ItemList } from "./components/ItemList/ItemList"
-import { Navbar } from "./components/NavBar/Navbar"
+
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer"
+import { NavBar } from "./components/Navbar/NavBar"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
-  return (
-    <>
-      <div className="container2">
-        <Navbar />
-        <ItemList greeting=' Hollywood Store ' />
-      </div>
-    </>
-
-  )
+    return (
+        <>
+            <div>
+                <NavBar />
+                <ItemListContainer greeting='Hollywood Store' />
+            </div>
+        </>
+    )
 }
+
 export default App
