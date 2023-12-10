@@ -2,9 +2,14 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom';
+
+const category = [
+    { id: 'jrm1984', name: 'Scripts', path: 'scripts', description: 'scripts category' },
+    { id: 'jrm1985', name: 'Slates', path: 'slates', description: 'slates category' },
+]
+
 
 const NavBar = () => {
     return (
@@ -17,8 +22,9 @@ const NavBar = () => {
 
                         <NavLink className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to='/'>Home</NavLink>
 
-                        <NavLink className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to='/category/scripts'>Scripts</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to='/category/slates'>Slates</NavLink>
+
+                        {category.map(category => <NavLink Key={category.id} className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to={`/category/${category.path}`}>{category.name}</NavLink>)}
+
                     </Nav>
                     <Nav>
 

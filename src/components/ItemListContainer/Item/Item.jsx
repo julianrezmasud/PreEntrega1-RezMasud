@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 
+
 export const Item = ({ product }) => {
     return (
         <div className='card w-25'>
