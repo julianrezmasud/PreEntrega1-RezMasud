@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
         const queryDoc = doc(dbFirestore, 'products', pid)
 
         getDoc(queryDoc)
-            .then(resultado => setProduct({ id: resultado.id, ...resultado.data() }))
+            .then(resultado => setproduct({ id: resultado.id, ...resultado.data() }))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
     }, [])
