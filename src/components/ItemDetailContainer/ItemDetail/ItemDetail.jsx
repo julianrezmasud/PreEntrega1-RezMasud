@@ -16,7 +16,7 @@ export const ItemDetail = ({ product }) => {
     return (
         <div className="row">
             <div className="col-12 text-center mt-5">
-                <h1>Product Detail</h1>
+                <h2>Product Detail</h2>
             </div>
             <div className="col-6 text-center mt-5">
                 <img src={product.imageUrl} alt={'image'} className="img-fluid" />
@@ -33,8 +33,9 @@ export const ItemDetail = ({ product }) => {
                         <ItemCounter onAdd={onAdd} inital={1} stock={10} />
                         :
                         <>
-                            < Link className="bt btn-outline-dark" to='/cart'>Finish Order</Link>
-                            <Link className="btn btn-outline-dark" to='/'>Keep Buying</Link>
+                            <br />< Link className="bt btn-outline-dark" to='/cart'>Finish Order</Link><br />
+
+                            <br /><Link className="btn btn-outline-dark" to='/'>Keep Buying</Link><br />
                         </>
                 }
             </div>

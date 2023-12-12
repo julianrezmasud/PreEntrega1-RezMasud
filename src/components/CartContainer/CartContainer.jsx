@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
-
 export const CartContainer = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -63,13 +62,13 @@ export const CartContainer = () => {
             {
                 totalPrice() === 0 ?
                     <div>
-                        No Product
-                        <Link to={'/'}>Go to pick a product</Link>
+                        <br />No Product<br />
+                        <Link to={'/'}>Choose a product</Link>
                     </div>
                     :
                     <>
-                        <label>Precio Total: {totalPrice()}</label>
-                        <button className="btn btn-danger" onClick={vaciarCarrito}>Empty Cart</button>
+                        <br /><label>Total Price: {totalPrice()}</label><br />
+                        <br /><button className="btn btn-danger" onClick={vaciarCarrito}>Empty Cart</button><br />
                         <form className="form-control p-5 m-5" onSubmit={handleOrder}>
 
                             <label>Enter Name</label><br />
