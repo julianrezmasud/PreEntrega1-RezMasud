@@ -5,11 +5,7 @@ export const Home = () => {
     const [like, setLike] = useState(false)
 
     useEffect(() => {
-
-        return () => {
-
-            console.log('dismounting home')
-        }
+        return () => { }
     })
 
     const handleCount = () => {

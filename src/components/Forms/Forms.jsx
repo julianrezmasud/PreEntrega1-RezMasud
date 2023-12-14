@@ -5,9 +5,9 @@ import { formWhitValidation } from "./FormWithValidation"
 
 const FormWhitValidation = formWhitValidation(Form)
 
-export const Formulario = () => {
+export const Typeform = () => {
     const [formData, setFormData] = useState({
-        nombre: '',
+        name: '',
         email: ''
     })
 

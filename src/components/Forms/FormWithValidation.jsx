@@ -10,11 +10,11 @@ export const formWhitValidation = (FormWrappedComponent) => {
             let isValid = true
 
             if (!props.formData.nombre) {
-                newErrors.nombre = 'El campo nombre es obligarorio'
+                newErrors.name = 'Mandatory Field'
                 isValid = false
             }
             if (!props.formData.email) {
-                newErrors.email = 'El campo email es obligarorio'
+                newErrors.email = 'Mandatory Field'
                 isValid = false
             }
 

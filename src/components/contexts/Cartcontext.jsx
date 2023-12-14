@@ -23,14 +23,14 @@ export const CartContextProvider = ({ children }) => {
         ])
     }
 
-    const vaciarCarrito = () => {
+    const emptyCart = () => {
         setCartList([])
 
     }
 
 
     const totalPrice = () => cartList.reduce((totalPrecio, product) => totalPrecio += (product.price * product.cantidad), 0)
-    const totalCantidad = () => cartList.reduce((totalProduct, product) => totalProduct += product.cantidad, 0)
+    const totalAmount = () => cartList.reduce((totalProduct, product) => totalProduct += product.cantidad, 0)
     const removeProduct = (pid) => {
         setCartList(cartList.filter(product => product.id != pid))
     }
@@ -40,9 +40,9 @@ export const CartContextProvider = ({ children }) => {
         <CartContext.Provider value={{
             cartList,
             addProduct,
-            vaciarCarrito,
+            emptyCart,
             totalPrice,
-            totalCantidad,
+            totalAmount,
             removeProduct
         }}>
             {children}

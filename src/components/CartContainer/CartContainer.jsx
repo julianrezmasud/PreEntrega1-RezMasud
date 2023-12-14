@@ -12,7 +12,7 @@ export const CartContainer = () => {
         repeatEmail: ''
     })
     const [isId, setIsId] = useState('')
-    const { cartList, vaciarCarrito, totalPrice, removeProduct } = useCartContext()
+    const { cartList, emptyCart, totalPrice, removeProduct } = useCartContext()
 
     const handleOrder = async (evt) => {
         evt.preventDefault()
@@ -35,7 +35,7 @@ export const CartContainer = () => {
                     repeatEmail: ''
                 })
 
-                vaciarCarrito()
+                emptyCart()
                 setTimeout(() => {
                     setIsId('')
                 }, 8000)
@@ -62,13 +62,13 @@ export const CartContainer = () => {
             {
                 totalPrice() === 0 ?
                     <div>
-                        <br />No Product<br />
-                        <Link to={'/'}>Choose a product</Link>
+                        <br />Empty<br />
+                        <Link to={'/'}>Choose a Product</Link>
                     </div>
                     :
                     <>
                         <br /><label>Total Price: {totalPrice()}</label><br />
-                        <br /><button className="btn btn-danger" onClick={vaciarCarrito}>Empty Cart</button><br />
+                        <br /><button className="btn btn-danger" onClick={emptyCart}>Empty Cart</button><br />
                         <form className="form-control p-5 m-5" onSubmit={handleOrder}>
 
                             <label>Enter Name</label><br />

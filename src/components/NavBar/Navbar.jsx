@@ -22,7 +22,6 @@ const NavBar = () => {
 
                         <NavLink className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to='/'>Home</NavLink>
 
-
                         {category.map(category => <NavLink Key={category.id} className={({ isActive }) => isActive ? 'btn btn-dark' : 'btn'} to={`/category/${category.path}`}>{category.name}</NavLink>)}
 
                     </Nav>
